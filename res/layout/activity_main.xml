@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.zhaoyy.design.MainActivity" >
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入密码："
+        android:textColor="#00BFFF"
+        android:textSize="32dp" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tip"
+        android:layout_below="@+id/tip"
+        android:ems="10"
+        android:inputType="textPassword" />
+    <!--android:ems="10" 宽度为10个字符的宽度,EditText的属性 ，只有在 android:layout_width=“wrap_content” 时，才会显示；
+如果是 android:layout_width=“match_parent” 时，则不会有变化。  -->
+
+     <Button 
+         android:id="@+id/cancel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:text="取消"
+         android:layout_below="@+id/pwd"
+         />
+     
+    <Button 
+        android:id="@+id/ensure"
+        android:text="确定"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/cancel"
+        android:layout_alignBottom="@+id/cancel"        
+        />  
+        
+    <!--toLeftOf设置位于哪个组件的左侧，属性值是其他UI组件的id属性  -->
+     
+     
+</RelativeLayout>
